@@ -1,0 +1,17 @@
+Git:-
+    Git is a version control system which is used to track changes in a code and coordinating with other developers
+    working on a project. It keeps the history of changes made to a code. Using git we can create new branch and
+    work on new functionality independently and once that feature is ready we can merge the branch into the main
+    branch.
+
+GitHub:-
+    GitHub is a web-based platform which hosts the git repositories and provide additional features like, issue
+    tracking , pull request, project management tools, and more. Developers use gitHub to store there repositories
+    in the cloud, which helps in sharing code and collaboration.
+
+    In summary git is VCS which is used to track changes and gitHub is a web portal which hosts the repositories.
+
+basic-commands:
+    * git config global user.name "thisisyouraz"
+    * git config global user.email "muhammad.iyaz150@gmail.com"
+    *
