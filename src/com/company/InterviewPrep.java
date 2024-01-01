@@ -232,6 +232,9 @@ public class InterviewPrep
 		ternary operator is a shortcut to assigning one of the two values to a variable, depending on a specific condition.
 		it's also a shortcut of if-else statement.
 		 */
+
+
+
 		System.out.println(timeConversion("06:40:03AM"));
 
 		/*
@@ -315,12 +318,54 @@ public class InterviewPrep
 			}
 		}
 		System.out.println("Sum of numbers divisible by 3 & 5 = " + sum);
+
+		int i = 4;
+		int evenCount = 0;
+		int oddCount = 0;
+		while (i <= 20)
+		{
+			i++;
+			if (evenCount == 5)
+			{
+				break;
+			}
+			if (!isEven(i))
+			{
+				oddCount ++;
+				continue;
+			}
+			evenCount ++;
+			System.out.printf(i + ",");
+		}
+
+		System.out.println("Odd count = "+ oddCount);
+		System.out.println("even count = " + evenCount);
+
+		System.out.println(sumDigits(3));
 	}
 
 	public static double calculateInterest(double amount, double rate)
 	{
 		return amount * (rate / 100);
 	}
+
+	public static int sumDigits(int number)
+	{
+		int sum = 0;
+		if (number > 0)
+		{
+			int lastDigit = 0;
+			while (number != 0)
+			{
+				lastDigit = number % 10;
+				number = number / 10;
+				sum = sum + lastDigit;
+			}
+			return sum;
+		}
+		return -1;
+	}
+
 
 	public static String getDurationString (int seconds)
 	{
@@ -512,6 +557,12 @@ public class InterviewPrep
 		}
 		return true;
 	}
+
+	public static boolean isEven (int number)
+	{
+		return number % 2 == 0;
+	}
+
 
 
 }
