@@ -567,7 +567,31 @@ public class InterviewPrep
 		return number % 2 == 0;
 	}
 
+	public static boolean hasSharedDigit(int num1, int num2)
+	{
+		if (num1 < 10 || num1 > 99 || num2 < 10 || num2 > 99)
+		{
+			return false;
+		}
 
+		for (int i = 0; i < 2 ; i++)
+		{
+			int l1 = num1 % 10;
+			int l2 = num2 % 10;
+			if(num2 > 9)
+			{
+				num2 = num2 / 10;
+			}
+
+			if (l1 == l2 || l1 == num2)
+			{
+				return true;
+			}
+
+			num1 = num1 / 10;
+		}
+		return false;
+	}
 	public static boolean isPalindrome (int number)
 	{
 		if (number < 10)
