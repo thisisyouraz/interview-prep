@@ -342,6 +342,10 @@ public class InterviewPrep
 		System.out.println("even count = " + evenCount);
 
 		System.out.println(sumDigits(3));
+
+
+		System.out.println(isPalindrome(11));
+
 	}
 
 	public static double calculateInterest(double amount, double rate)
@@ -564,5 +568,43 @@ public class InterviewPrep
 	}
 
 
+	public static boolean isPalindrome (int number)
+	{
+		if (number < 10)
+		{
+			return true;
+		}
+
+		int reversed = 0;
+		int i = number;
+		while (i != 0)
+		{
+			int lastDigit = i % 10;
+			reversed = (reversed * 10) + lastDigit;
+			i = i / 10;
+		}
+		return number == reversed;
+	}
+
+	public static int getEvenDigitSum (int number)
+	{
+		if (number < 0)
+		{
+			return -1;
+		}
+
+		int evenSum = 0;
+		while (number != 0)
+		{
+			int lastDigit = number % 10;
+			if (lastDigit % 2 == 0)
+			{
+				evenSum += lastDigit;
+			}
+			number = number / 10;
+		}
+
+		return evenSum;
+	}
 
 }
