@@ -346,6 +346,7 @@ public class InterviewPrep
 
 		System.out.println(isPalindrome(11));
 
+		isPerfectNumber(6);
 	}
 
 	public static double calculateInterest(double amount, double rate)
@@ -629,6 +630,57 @@ public class InterviewPrep
 		}
 
 		return evenSum;
+	}
+
+	public static int getGreatestCommonDivisor(int first, int second)
+	{
+		if (first < 10 || second < 10)
+		{
+			return -1;
+		}
+
+		int max;
+		int gcd = 1;
+
+		if (first < second)
+		{
+			max = first;
+		}
+
+		max = second;
+
+		for (int i = 1; i <= max; i++)
+		{
+			if ((first % i == 0) && (second % i == 0))
+			{
+				gcd = i;
+			}
+		}
+
+		return gcd;
+	}
+	public static boolean isPerfectNumber(int number)
+	{
+		if (number < 1)
+		{
+			return false;
+		}
+
+		int sum = 0;
+		for(int i = 1; i < number; i++)
+		{
+			if (number % i == 0)
+			{
+				sum += i;
+			}
+		}
+
+		if (sum == number)
+		{
+			return true;
+		}
+
+		return false;
 	}
 
 }
