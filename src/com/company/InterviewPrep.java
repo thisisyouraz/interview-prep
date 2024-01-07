@@ -683,4 +683,45 @@ public class InterviewPrep
 		return false;
 	}
 
+	public static int getLargestPrime (int number)
+	{
+		if (number < 0)
+		{
+			return -1;
+		}
+
+		int highestPrimeFactor = 0;
+
+		for (int i = 1; i <= number; i++)
+		{
+			if (number % i == 0)
+			{
+				int factorsCount = 0;
+
+				for (int j = 1; j <= i; j++)
+				{
+					if (i % j == 0)
+					{
+						factorsCount ++;
+					}
+
+					if (factorsCount > 2)
+					{
+						break;
+					}
+				}
+
+				if (factorsCount == 2)
+				{
+					highestPrimeFactor = i;
+				}
+			}
+		}
+
+		if (highestPrimeFactor == 0)
+		{
+			return -1;
+		}
+		return highestPrimeFactor;
+	}
 }
