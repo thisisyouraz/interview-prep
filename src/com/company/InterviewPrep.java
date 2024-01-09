@@ -5,6 +5,7 @@ import java.text.DecimalFormat;
 import java.text.MessageFormat;
 import java.util.List;
 import java.util.Objects;
+import java.util.Scanner;
 
 public class InterviewPrep
 {
@@ -349,6 +350,8 @@ public class InterviewPrep
 		isPerfectNumber(6);
 
 		printSquareStar(5);
+
+		sumUserInput();
 	}
 
 	public static double calculateInterest(double amount, double rate)
@@ -750,6 +753,33 @@ public class InterviewPrep
 			}
 			System.out.println();
 		}
+	}
+
+	/* Scanner class allow us to take input from user.
+	   Scanner class have instance methods like nextLine(), nextInt() .. and so on to take particular type of data from user.
+	   As they are instance methods, therefore, in order to have access to them, we first be required to create Scanner object (using 'new' keyword followed by class name)
+	 */
+
+	public static void sumUserInput()
+	{
+		double sum = 0;
+		Scanner scanner = new Scanner(System.in);
+		double userInput;
+		for (int i = 1; i <= 5;)
+		{
+			try
+			{
+				System.out.println("Enter number # " + i);
+				userInput = Double.parseDouble(scanner.nextLine());
+				sum += userInput;
+				i++;
+			}catch (NumberFormatException ex)
+			{
+				System.out.println("Please enter a valid number");
+			}
+		}
+
+		System.out.println("Sum of your entered numbers = " + sum);
 	}
 
 }
