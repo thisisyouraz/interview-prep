@@ -1,9 +1,8 @@
-package com.company;
+package com.learning;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.logging.Logger;
 
 public class Main
 {

@@ -1,13 +1,12 @@
-package com.company;
+package com.learning;
 
-import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.text.MessageFormat;
 import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class InterviewPrep
+public class JavaFundamentals
 {
 	public static final String AM = "AM";
 	public static final String PM = "PM";
@@ -351,7 +350,8 @@ public class InterviewPrep
 
 		printSquareStar(5);
 
-		sumUserInput();
+		//sumUserInput();
+		minMaxChallenge();
 	}
 
 	public static double calculateInterest(double amount, double rate)
@@ -780,6 +780,40 @@ public class InterviewPrep
 		}
 
 		System.out.println("Sum of your entered numbers = " + sum);
+	}
+
+	public static void minMaxChallenge()
+	{
+		int min = 0;
+		int max = 0;
+		int number;
+		Scanner scanner = new Scanner(System.in);
+
+		while (true)
+		{
+			System.out.println("Enter a number, or any character to exit");
+			try
+			{
+				number = Integer.parseInt(scanner.nextLine());
+
+				if (min == 0 && max == 0)
+				{
+					min = max = number;
+				}
+				if (number < min)
+				{
+					min = number;
+				}
+				if (number > max)
+				{
+					max = number;
+				}
+			}catch (NumberFormatException ex)
+			{
+				break;
+			}
+		}
+		System.out.println("Min = "+ min + "\nMax = "+ max);
 	}
 
 }
