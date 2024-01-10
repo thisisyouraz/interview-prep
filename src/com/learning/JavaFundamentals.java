@@ -346,7 +346,7 @@ public class JavaFundamentals
 
 		System.out.println(isPalindrome(11));
 
-		isPerfectNumber(6);
+		boolean isPrime = isPerfectNumber(6);
 
 		printSquareStar(5);
 

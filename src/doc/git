@@ -12,6 +12,14 @@ GitHub:-
     In summary git is VCS which is used to track changes and gitHub is a web portal which hosts the repositories.
 
 basic-commands:
+    * git config --list
     * git config global user.name "thisisyouraz"
     * git config global user.email "muhammad.iyaz150@gmail.com"
-    *
+    * UNDO changes:
+        + staged changes:
+            - git reset <- file name ->       (reset the specific file)
+            - git reset                       (Reset all the changes in the project)
+        + committed changes:
+            - git reset HEAD~1                (revert the last commit and set the HEAD one commit back)
+            - git reset <-commit hash->       (set the HEAD to the specified commit)
+            - git reset --hard <-commit hash-> (set the HEAD to the specified commit and removed the changes from the code editor as well after that commit from the code editor)
