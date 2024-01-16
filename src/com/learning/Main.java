@@ -1,5 +1,7 @@
 package com.learning;
 
+import com.learning.OOP.BankAccount;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -74,16 +76,16 @@ public class Main
 
 		sum3and5();
 
-//		System.out.println(sumDigits(10));
-//
-//		System.out.println(-120/10);
-//
-//		System.out.println(getGreatestCommonDivisor(10,35));
-//
-//		System.out.println(getDigitCount(11000));
-//
-//		System.out.println(isPrime(2));
-//
+		System.out.println(sumDigits(10));
+
+		System.out.println(-120/10);
+
+		System.out.println(getGreatestCommonDivisor(10,35));
+
+		System.out.println(getDigitCount(11000));
+
+		System.out.println(isPrime(2));
+
 
 		printSquareStar(20);
 
@@ -91,7 +93,23 @@ public class Main
 
 		fromLong(1692262808429L);
 
+		BankAccount AyazAccount = new BankAccount();
+		AyazAccount.setAccountName("Ayaz");
+		AyazAccount.setAccountNumber("091278300007");
+		AyazAccount.setEmail("muhammad.iyaz150@gmail.com");
+		AyazAccount.setPhone("+923009495789");
+		AyazAccount.depositAmount(100000);
+		AyazAccount.withDrawAmount(24000);
 
+
+		BankAccount harisAcc = new BankAccount();
+		harisAcc.setAccountName("HARIS");
+		harisAcc.setAccountNumber("091278300008");
+		harisAcc.setEmail("muhammad.haris@gmail.com");
+		harisAcc.setPhone("+923009495788");
+		harisAcc.depositAmount(200000);
+		harisAcc.withDrawAmount(24000);
+		
 	}
 
 

@@ -22,4 +22,4 @@ basic-commands:
         + committed changes:
             - git reset HEAD~1                (revert the last commit and set the HEAD one commit back)
             - git reset <-commit hash->       (set the HEAD to the specified commit)
-            - git reset --hard <-commit hash-> (set the HEAD to the specified commit and removed the changes from the code editor as well after that commit from the code editor)
+            - git reset --hard <-commit hash-> (set the HEAD to the specified commit and removed the changes from the code editor as well after that commit)
