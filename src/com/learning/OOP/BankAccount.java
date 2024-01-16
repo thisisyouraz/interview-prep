@@ -8,6 +8,23 @@ public class BankAccount
 	private String email;
 	private String phone;
 
+	public void withDrawAmount(long amount)
+	{
+		if (balance - amount < 0)
+		{
+			System.out.println("Insufficient balance, you have $" + balance);
+		}
+
+		balance = balance - amount;
+		System.out.println("you account debited by $" + amount + ", your new balance is $" + balance);
+	}
+
+	public void depositAmount(long amount)
+	{
+		balance = balance + amount;
+		System.out.println("dear " + accountName + ", you account is credited by $" + amount + " Your new balance is $" + balance);
+	}
+
 	public String getAccountName()
 	{
 		return accountName;
@@ -27,7 +44,6 @@ public class BankAccount
 	{
 		this.balance = balance;
 	}
-
 	public String getAccountNumber()
 	{
 		return accountNumber;
@@ -56,22 +72,5 @@ public class BankAccount
 	public void setPhone(String phone)
 	{
 		this.phone = phone;
-	}
-
-	public void withDrawAmount(long amount)
-	{
-		if (balance - amount < 0)
-		{
-			System.out.println("Insufficient balance, you have $" + balance);
-		}
-
-		balance = balance - amount;
-		System.out.println("you account debited by $" + amount + ", your new balance is $" + balance);
-	}
-
-	public void depositAmount(long amount)
-	{
-		balance = balance + amount;
-		System.out.println("dear " + accountName + ", you account is credited by $" + amount + " Your new balance is $" + balance);
 	}
 }
