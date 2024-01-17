@@ -1,7 +1,9 @@
 package com.learning;
 
 import com.learning.OOP.BankAccount;
+import com.learning.OOP.Customer;
 
+import java.sql.SQLOutput;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -109,7 +111,22 @@ public class Main
 		harisAcc.setPhone("+923009495788");
 		harisAcc.depositAmount(200000);
 		harisAcc.withDrawAmount(24000);
-		
+
+		Customer firstCustomer = new Customer();
+		System.out.println(firstCustomer.getName());
+		System.out.println(firstCustomer.getCreditLimit());
+		System.out.println(firstCustomer.getEmailAddress());
+
+		Customer secondCustomer = new Customer("ayaz","muhammad.iyaz@gmail.com");
+		System.out.println(secondCustomer.getName());
+		System.out.println(secondCustomer.getCreditLimit());
+		System.out.println(secondCustomer.getEmailAddress());
+
+		Customer thirdCustomer = new Customer("haris",1000,"muhammad.haris@gmail.com");
+		System.out.println(thirdCustomer.getName());
+		System.out.println(thirdCustomer.getCreditLimit());
+		System.out.println(thirdCustomer.getEmailAddress());
+
 	}
 
 
