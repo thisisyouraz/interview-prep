@@ -6,6 +6,11 @@ public class Customer
 	private double creditLimit;
 	private String emailAddress;
 
+	public Customer(String name)
+	{
+		this.name = name;
+	}
+
 	public Customer()
 	{
 		this("default name", "default-email");
@@ -21,11 +26,9 @@ public class Customer
 		this.emailAddress = emailAddress;
 	}
 
-
-
 	public String getName()
 	{
-		return name;
+		return this.name;
 	}
 	public String getEmailAddress()
 	{
@@ -34,5 +37,10 @@ public class Customer
 	public double getCreditLimit()
 	{
 		return creditLimit;
+	}
+
+	public void printName(Customer customer)
+	{
+		System.out.println(customer.getName());
 	}
 }
