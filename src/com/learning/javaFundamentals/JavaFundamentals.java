@@ -1,7 +1,8 @@
-package com.learning;
+package com.learning.javaFundamentals;
 
 import java.text.DecimalFormat;
 import java.text.MessageFormat;
+import java.time.Instant;
 import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
@@ -129,7 +130,7 @@ public class JavaFundamentals
 
 		int numOfPounds = 1;
 		double poundsToKgs = numOfPounds * 0.45359237;
-		System.out.println(numOfPounds + " pounds = " + poundsToKgs + " kgs");;
+		System.out.println(numOfPounds + " pounds = " + poundsToKgs + " kgs");
 
 		/*
 		A class is kind of a custom dataType in java. (BigDecimal - used for more precise calculations)
@@ -344,14 +345,35 @@ public class JavaFundamentals
 		System.out.println(sumDigits(3));
 
 
-		System.out.println(isPalindrome(11));
+//		System.out.println(isPalindrome(11));
+//
+//		boolean isPrime = isPerfectNumber(6);
+//
+//		printSquareStar(5);
+//
+//		//sumUserInput();
+//		minMaxChallenge();
 
-		boolean isPrime = isPerfectNumber(6);
+		System.out.println(Instant.now().getEpochSecond());
 
-		printSquareStar(5);
+		System.out.println(String.format("%-2s", Instant.now().getEpochSecond()).replace(' ', '0'));
 
-		//sumUserInput();
-		minMaxChallenge();
+		//System.out.println(leadingZeros(String.valueOf(Instant.now().getEpochSecond()), 12));
+
+		System.out.println(padRight(String.valueOf(Instant.now().getEpochSecond()), 12));
+	}
+
+
+	public static String padRight(String s, int n) {
+		return String.format("%-" + n + "s", s).replace(' ', '0');
+	}
+
+
+	public static String leadingZeros(String s, int length) {
+		if (s.length() >= length) return s;
+		else return String.format("%0" + (length-s.length()) + "d%s", 0, s);
+
+
 	}
 
 	public static double calculateInterest(double amount, double rate)

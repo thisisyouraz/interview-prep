@@ -41,6 +41,6 @@ public class Customer
 
 	public void printName(Customer customer)
 	{
-		System.out.println(customer.getName());
+		System.out.println(this.getName());
 	}
 }
