@@ -45,28 +45,30 @@ public class ObjectOrientedProgramming
 	 		using this keyword or by using the specific object reference.
 	 */
 
-	public static void main(String [] arg)
-	{
-		//Customer customer = new Customer("ayaz");
-		//customer.printName(new Customer("haris"));
-
-		MeetingRoom meetingRoom = new MeetingRoom();
-		Room room = new Room();
-		DrawingRoom drawRoom = new DrawingRoom();
-		Room drawRoom1 = new DrawingRoom();
-
-		System.out.println(meetingRoom.noOfAC); // 2
-		System.out.println(MeetingRoom.noOfAC); // 2
-		System.out.println(Room.noOfAC); 		// 1
-
-		System.out.println(room.noOfAC); 		// 1
-		System.out.println(drawRoom.noOfAC);	// 3
-
-		drawRoom.staticMethod();
-		drawRoom1.staticMethod();
-		DrawingRoom.staticMethod();
-		Room.staticMethod();
-	}
+//	public static void main(String [] arg)
+//	{
+//		//Customer customer = new Customer("ayaz");
+//		//customer.printName(new Customer("haris"));
+//
+//		MeetingRoom meetingRoom = new MeetingRoom();
+//		Room room = new Room();
+//		DrawingRoom drawRoom = new DrawingRoom();
+//		Room drawRoom1 = new DrawingRoom();
+//
+//		System.out.println(meetingRoom.noOfAC); // 2
+//		System.out.println(MeetingRoom.noOfAC); // 2
+//		System.out.println(Room.noOfAC); 		// 1
+//
+//		System.out.println(room.noOfAC); 		// 1
+//		System.out.println(drawRoom.noOfAC);	// 3
+//
+//		drawRoom.staticMethod();
+//		drawRoom1.staticMethod();
+//		DrawingRoom.staticMethod();
+//		Room.staticMethod();
+//
+//
+//	}
 
 	/*
 	Static variables are associated with Class.
@@ -89,5 +91,29 @@ public class ObjectOrientedProgramming
 	in the same constructor.
 
 
+	Polymorphism:
+		polymorphism is a power feature of OOP which enables an action to perform differently based on the object type
+		on runtime. It is achieved through method overriding and it enhances the flexibilty and extentbilty of the code.
+
+		types of polymorphism:
+			- Compile-time polymorphism.
+			- Run-time polymorphism.
+
+		compile-time is which will determine which method will be involked at compile time. It is achieved through method overloading
+		Run-time is which will determine which method to envoke at the runtime based on the object type. It is achieved through
+		method overriding.
+
+
+
+	Encapsulation:
+		Encapsulation is bundling of the data(variables) and method that operate on them in a single class.
+		it is achieved by access modifiers. (Set the field as private and provide public getters setters for the private members)
+
+		it is useful in managing the access to sensitive data.
+
 	 */
+
 }
+
+
+

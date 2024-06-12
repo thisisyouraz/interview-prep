@@ -8,4 +8,9 @@ public class DrawingRoom extends Room
 	{
 		System.out.println("staticMethod in DrawingRoom");
 	}
+
+	private void privateMethod()
+	{
+		System.out.println("privateMethod in DrawingRoom");
+	}
 }

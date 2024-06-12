@@ -12,6 +12,10 @@ public class Room
 		System.out.println("Base Constructor");
 	}
 
+	private void privateMethod()
+	{
+		System.out.println("Private Method");
+	}
 	public static void staticMethod()
 	{
 		System.out.println("static method in base class");
