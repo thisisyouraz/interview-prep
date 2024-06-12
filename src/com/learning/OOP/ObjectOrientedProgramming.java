@@ -45,11 +45,11 @@ public class ObjectOrientedProgramming
 	 		using this keyword or by using the specific object reference.
 	 */
 
-//	public static void main(String [] arg)
-//	{
-//		//Customer customer = new Customer("ayaz");
-//		//customer.printName(new Customer("haris"));
-//
+	public static void main(String [] arg)
+	{
+		//Customer customer = new Customer("ayaz");
+		//customer.printName(new Customer("haris"));
+
 //		MeetingRoom meetingRoom = new MeetingRoom();
 //		Room room = new Room();
 //		DrawingRoom drawRoom = new DrawingRoom();
@@ -67,8 +67,11 @@ public class ObjectOrientedProgramming
 //		DrawingRoom.staticMethod();
 //		Room.staticMethod();
 //
-//
-//	}
+
+		Cat c = new Cat();
+		c.sound();
+		c.feed();
+	}
 
 	/*
 	Static variables are associated with Class.
